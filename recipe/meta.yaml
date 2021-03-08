@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-neo4j" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-neo4j-{{ version }}.tar.gz
-  sha256: 0787909af1bde9f96d25e79cf172f394589796091478723bcbf114b6371405a3
+  sha256: 937ec0bfee90c00f166b868606cd92973171d70a625241dc0e840c3ddde006d4
 
 build:
   number: 0
