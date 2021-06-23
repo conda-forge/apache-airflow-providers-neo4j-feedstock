@@ -10,7 +10,7 @@ source:
   sha256: 35ddde54107447314df8f7069a787ec6d237809656ab260304d4fea545f8bf18
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,7 +21,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - neo4j-python-driver >=4.2.1
     - python >=3.6
 
