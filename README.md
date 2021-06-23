@@ -40,6 +40,7 @@ Installing `apache-airflow-providers-neo4j` from the `conda-forge` channel can b
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `apache-airflow-providers-neo4j` can be installed with:
