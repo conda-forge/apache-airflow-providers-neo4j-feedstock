@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-neo4j" %}
-{% set version = "2.1.3" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-neo4j-{{ version }}.tar.gz
-  sha256: ab718c6ad5f4ed7a5b58159525dbd41838d74d59e3569ecfaa1d4a03688532f5
+  sha256: ea5616eb0b36b18c1bcc14a3ca0c10d87ebe899e0642d69cda4b2fd9f46a2538
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -21,13 +21,13 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     - neo4j-python-driver >=4.2.1
 
 test:
   imports:
     - airflow.providers.neo4j
-    - airflow.providers.neo4j.example_dags
+    - airflow.providers.neo4j.hooks
   commands:
     - pip check
   requires:
@@ -35,9 +35,12 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Neo4j for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-neo4j package
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-neo4j/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
