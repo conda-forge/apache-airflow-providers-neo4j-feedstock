@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-neo4j" %}
-{% set version = "3.2.1" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-neo4j-{{ version }}.tar.gz
-  sha256: 94927af1c16a8020903c3b376c6a33c67902da770e69acb85ed2a67f80ceedf2
+  sha256: b7e643bb463165aeaf6763fb59dea19a6e72ad6a240849ff1d5eb809590cad7d
 
 build:
   noarch: python
@@ -17,11 +17,12 @@ build:
 requirements:
   host:
     - python >=3.7
+    - setuptools >=67.2.0
+    - wheel
     - pip
-    - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.3.0
+    - apache-airflow >=2.4.0
     - neo4j-python-driver >=4.2.1
 
 test:
