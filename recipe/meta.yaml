@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-neo4j" %}
-{% set version = "3.7.0" %}
+{% set version = "3.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: dab3a82c18694ebfcd7ec81739d60a3e26aa332d084a49d0901d841acb29f0fc
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 5a0c981642dfcd8a8cd1392016d10939783fb88c7ddf6cd04b6d0ec027e75d53
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.0
     - pip
   run:
-    - python >=3.8
-    - apache-airflow >=2.8.0
+    - python >={{ python_min }},<4.dev0
+    - apache-airflow >=2.9.0
     - neo4j-python-driver >=4.2.1
 
 test:
@@ -30,6 +30,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
