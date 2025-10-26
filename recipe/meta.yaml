@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-neo4j" %}
-{% set version = "3.10.1" %}
+{% set version = "3.10.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_neo4j-{{ version }}.tar.gz
-  sha256: 282b0654ef5e99ad39846b0b053df15f92f6a469ba54decd0d0a5ba5a608f7c5
+  sha256: fc1a93188bcfec038753fe468fc0625223d56b5df08b27b21d936134e1d01eca
 
 build:
   noarch: python
