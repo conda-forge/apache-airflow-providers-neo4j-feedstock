@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.8.0
-    - neo4j >=5.20.0
+    - neo4j-python-driver >=5.20.0
 
 test:
   imports:
