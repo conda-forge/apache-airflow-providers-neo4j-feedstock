@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-neo4j" %}
 {% set version = "3.11.0" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.8.0
-    - neo4j-python-driver >=5.20.0
+    - neo4j >=5.20.0
 
 test:
   imports:
