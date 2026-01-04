@@ -29,7 +29,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.neo4j
+      - airflow.providers.neo4j
       pip_check: true
       python_version: ${{ python_min }}.*
 
