@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-neo4j
-  version: "3.11.3"
+  version: "3.11.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_neo4j-${{ version }}.tar.gz
-  sha256: 7db1ec82c2d1e34808c38811e737227b937a09b590545139d9386daef434f911
+  sha256: a1244167c433cdf022fec4f966fb8d8cb6b74dbdaa545a4978cf0ddac8186661
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ requirements:
 tests:
   - python:
       imports:
-      - airflow.providers.neo4j
+        - airflow.providers.neo4j
       pip_check: true
       python_version: ${{ python_min }}.*
 
